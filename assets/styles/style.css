@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(#170638, #2709bb);
+    color: #fff;
+}
+
+header {
+    display: inline;
+}
+
+header div {
+    position: sticky;
+    background: #1e0e6e;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+
+header div .logo {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header div ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header div ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+header div ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    border-radius: 20px;
+}
+
+header div ul li a:hover,
+header div ul li a.active {
+    background: #fff;
+    color: #220a0a;
+}
+
+.jumbotron {
+    padding: 60px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section img#latar {
+    mix-blend-mode: screen;
+}
+
+#btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #fff;
+    color: #110454;
+    font-size: 1.5em;
+    z-index: 9;
+}
+
+.typewriter h1 {
+    color: #fff;
+    font-size: 3em;
+    z-index: 9;
+    overflow: hidden;
+    border-right: .15em solid white;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation:
+        typing 3.5s steps(30, end),
+        blink-caret .5s step-end infinite;
+}
+
+#about {
+    width: 98%;
+    padding: 50px;
+    margin: 20px;
+    text-align: justify;
+    background: #2309a1;
+}
+
+#work {
+    width: 98%;
+    padding: 50px;
+    margin: 20px;
+    text-align: justify;
+    background: #2309a1;
+}
+
+#content h1 {
+    text-align: center;
+    line-height: 5ch;
+}
+
+aside {
+    flex: 1;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.profile header {
+    text-align: center;
+    background: #2709bb;
+}
+
+#content img {
+    height: 400px;
+}
+
+.profile img {
+    position: absolute;
+    left: 610px;
+    height: 300px;
+}
+
+footer {
+    padding: 20px;
+    color: white;
+    background-color: #2709bb;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: white
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    #content,
+    aside {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    main {
+        flex-flow: column nowrap;
+    }
+
+    main aside {
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        justify-content: center;
+    }
+
+    main aside {
+        align-self: stretch;
+    }
+}
